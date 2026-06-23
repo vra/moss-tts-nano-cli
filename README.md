@@ -16,6 +16,8 @@ One-command zero-shot voice cloning with the [MOSS-TTS-Nano-100M](https://huggin
 - [uv](https://docs.astral.sh/uv/) (recommended)
 - FFmpeg (used indirectly by audio tooling)
 
+> If your `uv` is configured to use a PyPI mirror that has not synced the package yet, run with the official index: `uvx --index-url https://pypi.org/simple --from moss-tts-nano-cli moss-tts-nano --help`
+
 ## Install
 
 ```bash
