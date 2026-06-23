@@ -1,0 +1,57 @@
+[project]
+name = "moss-tts-nano-cli"
+version = "0.1.0"
+description = "One-command zero-shot voice cloning with MOSS-TTS-Nano via mlx-audio."
+readme = "README.md"
+authors = [
+    { name = "蔚山", email = "weishan.wyf@alibaba-inc.com" }
+]
+requires-python = ">=3.12"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+]
+dependencies = [
+    "click>=8.0.0",
+    "mlx-audio>=0.0.1",
+    "numpy>=1.26.0",
+    "soundfile>=0.12.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "ruff>=0.6.0",
+]
+
+[project.scripts]
+moss-tts-nano = "moss_tts_nano_cli:main"
+moss-tts-nano-cli = "moss_tts_nano_cli:main"
+
+[project.urls]
+Homepage = "https://github.com/vra/moss-tts-nano-cli"
+Repository = "https://github.com/vra/moss-tts-nano-cli"
+Issues = "https://github.com/vra/moss-tts-nano-cli/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/moss_tts_nano_cli"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
