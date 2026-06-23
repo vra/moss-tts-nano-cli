@@ -16,7 +16,7 @@ One-command zero-shot voice cloning with the [MOSS-TTS-Nano-100M](https://huggin
 - [uv](https://docs.astral.sh/uv/) (recommended)
 - FFmpeg (used indirectly by audio tooling)
 
-> If your `uv` is configured to use a PyPI mirror that has not synced the package yet, run with the official index: `uvx --index-url https://pypi.org/simple --from moss-tts-nano-cli moss-tts-nano --help`
+> If your `uv` is configured to use a PyPI mirror that has not synced the package yet, run with the official index: `uvx --index-url https://pypi.org/simple moss-tts-nano-cli --help`
 
 ## Install
 
@@ -27,7 +27,7 @@ uv tool install moss-tts-nano-cli
 Or run without installing:
 
 ```bash
-uvx --from moss-tts-nano-cli moss-tts-nano --help
+uvx moss-tts-nano-cli --help
 ```
 
 ## Usage
@@ -35,7 +35,7 @@ uvx --from moss-tts-nano-cli moss-tts-nano --help
 ### Clone a voice
 
 ```bash
-moss-tts-nano clone \
+moss-tts-nano-cli clone \
   --ref ./my_voice.wav \
   --text "Hello, this is my cloned voice speaking." \
   --out output.wav
@@ -46,13 +46,13 @@ The first run downloads `mlx-community/MOSS-TTS-Nano-100M` and the audio tokeniz
 ### Eagerly download the model
 
 ```bash
-moss-tts-nano download
+moss-tts-nano-cli download
 ```
 
 ### Show info
 
 ```bash
-moss-tts-nano info
+moss-tts-nano-cli info
 ```
 
 ## Development

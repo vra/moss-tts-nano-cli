@@ -10,7 +10,7 @@ from moss_tts_nano_cli.tts import clone_voice, save_audio
 
 
 @click.group()
-@click.version_option(version=version("moss-tts-nano-cli"), prog_name="moss-tts-nano")
+@click.version_option(version=version("moss-tts-nano-cli"), prog_name="moss-tts-nano-cli")
 def cli():
     """MOSS-TTS-Nano CLI: zero-shot multilingual voice cloning."""
 
