@@ -1,6 +1,6 @@
 [project]
 name = "moss-tts-nano-cli"
-version = "0.1.1"
+version = "0.1.2"
 description = "One-command zero-shot voice cloning with MOSS-TTS-Nano via mlx-audio."
 readme = "README.md"
 authors = [
